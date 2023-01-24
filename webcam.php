@@ -1,5 +1,5 @@
 <?php
-    $folder = 'webcam2/';
+    $folder = 'webcam/'; // Replace with the directory that contains one or more photos. The script will use the most recent one.
     $files = scandir($folder);
     $files = array_diff($files, array('.', '..'));
     $files = array_values($files);
