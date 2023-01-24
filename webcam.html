@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Webcam Live</title>
+    <title>Webcam Live</title> <!-- Replace title -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
         img {
@@ -10,17 +10,17 @@
     </style>
 </head>
 <body>
-    <img id="webcam-image" src="webcam2.php">
+    <img id="webcam-image" src="webcam.php"> <!-- Replace with the name of the .php file if you change the file name. -->
     <script>
         function resizeImage() {
     var img = document.getElementById("webcam-image");
     var width = window.innerWidth;
-    img.style.width = (width * 0.95) + "px";
+    img.style.width = (width * 0.95) + "px"; <!-- Change the number in multiplication to decrease or enlarge the image -->
 }
         resizeImage();
         setInterval(function() {
             var date = new Date();
-            document.getElementById("webcam-image").src = "webcam2.php?t=" + date.getTime();
+            document.getElementById("webcam-image").src = "webcam.php?t=" + date.getTime(); <!-- Replace with the name of the .php file if you change the file name. -->
         }, 1000);
         window.addEventListener("resize", resizeImage);
     </script>
