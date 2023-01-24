@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Webcam Live</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        img {
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <img id="webcam-image" src="webcam2.php">
+    <script>
+        function resizeImage() {
+    var img = document.getElementById("webcam-image");
+    var width = window.innerWidth;
+    img.style.width = (width * 0.95) + "px";
+}
+        resizeImage();
+        setInterval(function() {
+            var date = new Date();
+            document.getElementById("webcam-image").src = "webcam2.php?t=" + date.getTime();
+        }, 1000);
+        window.addEventListener("resize", resizeImage);
+    </script>
+</body>
+</html>
