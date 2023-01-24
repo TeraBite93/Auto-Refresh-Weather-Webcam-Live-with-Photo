@@ -21,7 +21,7 @@
         setInterval(function() {
             var date = new Date();
             document.getElementById("webcam-image").src = "webcam.php?t=" + date.getTime(); <!-- Replace with the name of the .php file if you change the file name. -->
-        }, 1000);
+        }, 5000);
         window.addEventListener("resize", resizeImage);
     </script>
 </body>
